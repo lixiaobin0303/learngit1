@@ -1,0 +1,48 @@
+@nice-blue:#5863ad;
+.div1{
+	color:@nice-blue;
+	.border;
+	.ridus(5px);
+}
+.border{
+	border-top: 1px solid #333;
+	border-left: 1px solid #666;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #369;
+}
+.ridus(@value){
+	border-radius:@value;
+	-webkit-border-radius:@value; 
+	-moz-border-radius:@value;
+	-o-border-radius:@value;
+}
+.sanjiao-demo(@_;@width:3px;@color:#ccc){/*默认向上*/
+	border-width: @width;
+	border-style: solid ;
+	border-color: transparent transparent @color transparent;
+}
+.sanjiao-demo(bottom;@width:3px;@color:#ccc){
+	border-width: @width;
+	border-style: solid ;
+	border-color: @color transparent transparent transparent;
+}
+.sanjiao-demo(top;@width:3px;@color:#ccc){
+	border-width: @width;
+	border-style: solid ;
+	border-color: transparent transparent @color transparent;
+}
+.sanjiao-demo(right;@width:3px;@color:#ccc){
+	border-width: @width;
+	border-style: solid ;
+	border-color: transparent transparent transparent @color;
+}
+.sanjiao-demo(left;@width:3px;@color:#ccc){
+	border-width: @width;
+	border-style: solid ;
+	border-color: transparent @color transparent transparent;
+}
+.sanjiao{
+	.sanjiao-demo(qwe;5px);
+	width: 0;
+	height: 0;
+}
